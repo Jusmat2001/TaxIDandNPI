@@ -210,10 +210,11 @@ namespace TaxIDandNPI
             box.Text = String.Empty;
             box.GotFocus -= NpiSearchBox_GotFocus;
         }
-        
+
         #endregion
 
         //V1.1.0.14
+        #region Version display
         public Version AssemblyVersion
         {
             get
@@ -235,6 +236,7 @@ namespace TaxIDandNPI
                 throw;
             }
         }
+        #endregion
     }
 }
     
