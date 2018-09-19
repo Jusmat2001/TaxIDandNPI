@@ -35,8 +35,7 @@ namespace TaxIDandNPI
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                 MessageBox.Show(e.Message + "\nPlease notify Justin in IT dept by email with error message.");
             }
 
         }
@@ -58,11 +57,10 @@ namespace TaxIDandNPI
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                MessageBox.Show(e.Message + "\nPlease notify Justin in IT dept by email with error message.");
             }
         }
-
+        #region Copy buttons
         private void CopyTidBtn_Click(object sender, RoutedEventArgs e)
         {
             Clipboard.SetText(TidBox.Text);
@@ -72,7 +70,7 @@ namespace TaxIDandNPI
         {
             Clipboard.SetText(NpiBox.Text);
         }
-
+#endregion
         private void PListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var text = PListBox.SelectedValue.ToString();
@@ -116,8 +114,7 @@ namespace TaxIDandNPI
                 }
                 catch (Exception exception)
                 {
-                    Console.WriteLine(exception);
-                    throw;
+                    MessageBox.Show(exception.Message + "\nPlease notify Justin in IT dept by email with error message.");
                 }
             }
         }
@@ -190,8 +187,7 @@ namespace TaxIDandNPI
                 }
                 catch (Exception exception)
                 {
-                    Console.WriteLine(exception);
-                    throw;
+                    MessageBox.Show(exception.Message + "\nPlease notify Justin in IT dept by email with error message.");
                 }
             }
         }

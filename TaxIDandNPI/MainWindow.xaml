@@ -15,7 +15,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="10"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
@@ -39,11 +39,11 @@
         <Button x:Name="CopyNpiBtn" Content="Copy" Grid.Row="3" Width="30" HorizontalAlignment="Right" Grid.Column="1" FontSize="8" Click="CopyNpiBtn_Click" Margin="0,0,5,0" />
         <TextBox x:Name="TidBox" Grid.Column="0" Grid.Row="4" Margin="5,0,5,5"  />
         <TextBox x:Name="NpiBox" Grid.Column="1" Grid.Row="4" Margin="5,0,5,5"  />
-        <Border Background="Black" Grid.Row="5" Grid.ColumnSpan="2" Grid.Column="0"/>
-        <TextBlock Grid.Column="0" Grid.Row="6" Text="Tax ID or NPI:" FontWeight="Bold"  HorizontalAlignment="Center"/>
-        <TextBlock Grid.Column="1" Grid.Row="6" Text="Dr Last Name:" FontWeight="Bold" HorizontalAlignment="Center" />
-        <TextBox x:Name="NSearchBox" Grid.Column="0" Grid.Row="7" Margin="5,5,5,0" PreviewKeyDown="NEnterClicked" Text="Press Enter to search"   GotFocus="TidSearchBox_GotFocus"/>
-        <TextBox x:Name="DrSearchBox" Grid.Column="1" Grid.Row="7" Margin="5,5,5,0" PreviewKeyDown="DrEnterClicked" Text="Press Enter to search" GotFocus="NpiSearchBox_GotFocus" />
+        <Border Background="Black" Grid.Row="5" Grid.ColumnSpan="2" Grid.Column="0" Margin="0" Padding="0,10,0,0" />
+        <TextBlock Grid.Column="0" Grid.Row="6" Text="Search by Tax ID or NPI:" FontWeight="Bold"  HorizontalAlignment="Center" Foreground="Black"/>
+        <TextBlock Grid.Column="1" Grid.Row="6" Text="Search by Doctor Name:" FontWeight="Bold" HorizontalAlignment="Center" />
+        <TextBox x:Name="NSearchBox" Grid.Column="0" Grid.Row="7" Margin="5,5,5,0" PreviewKeyDown="NEnterClicked" Text="Press Enter to search"   GotFocus="TidSearchBox_GotFocus" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="DrSearchBox" Grid.Column="1" Grid.Row="7" Margin="5,5,5,0" PreviewKeyDown="DrEnterClicked" Text="Press Enter to search" GotFocus="NpiSearchBox_GotFocus" HorizontalContentAlignment="Center" />
         <TextBox x:Name="ResultBox" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2"  Margin="5,10" Background="LightGray" />
 
     </Grid>
