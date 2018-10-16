@@ -12,6 +12,7 @@ using Dapper;
 //V1.1.0.0- Added search function, sql db from app.config, UI and function improvements. 
 //V1.1.0.15- Added multi-practice results view for Dr npi search.
 //V1.1.1.0- TID and NPI search moved to same box. Dr Name search added. 
+//V1.1.1.5- Bug fix
 
 
 
@@ -35,7 +36,7 @@ namespace TaxIDandNPI
             }
             catch (Exception e)
             {
-                 MessageBox.Show(e.Message + "\nPlease notify Justin in IT dept by email with error message.");
+                 MessageBox.Show(e.Message + "\n\nPlease notify Justin in IT dept by email with error message.");
             }
 
         }
@@ -57,7 +58,7 @@ namespace TaxIDandNPI
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message + "\nPlease notify Justin in IT dept by email with error message.");
+                MessageBox.Show(e.Message + "\n\nPlease notify Justin in IT dept by email with error message.");
             }
         }
         #region Copy buttons
@@ -114,7 +115,7 @@ namespace TaxIDandNPI
                 }
                 catch (Exception exception)
                 {
-                    MessageBox.Show(exception.Message + "\nPlease notify Justin in IT dept by email with error message.");
+                    MessageBox.Show(exception.Message + "\n\nPlease notify Justin in IT dept by email with error message.");
                 }
             }
         }
@@ -134,7 +135,11 @@ namespace TaxIDandNPI
                     if (qry.Length == 9)
                     {
                         var sqlResults = qda.SearchPracticesByTid(qry);
-                        if (sqlResults.Count == 0) { ResultBox.Text = "----- No results found -----"; }
+                        if (sqlResults.Count == 0)
+                        {
+                            ResultBox.Text = "----- No results found -----";
+                            return;
+                        }
                         else
                         {
                             foreach (var p in sqlResults)
@@ -187,7 +192,7 @@ namespace TaxIDandNPI
                 }
                 catch (Exception exception)
                 {
-                    MessageBox.Show(exception.Message + "\nPlease notify Justin in IT dept by email with error message.");
+                    MessageBox.Show(exception.Message + "\n\nPlease notify Justin in IT dept by email with error message.");
                 }
             }
         }
