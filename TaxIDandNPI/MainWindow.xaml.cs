@@ -22,7 +22,7 @@ namespace TaxIDandNPI
     public partial class MainWindow : Window
     {
         List<Practice> output = new List<Practice>();
-        string sqlqry = "select * FROM [Practice Table]";
+        string sqlqry = "select * FROM [PracticeTable]";
         
 
 
